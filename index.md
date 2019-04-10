@@ -33,7 +33,7 @@ int main(void) {
 }
 ```
 
-Thats it! a fully functional C program. It doesnt do much, but it works. First lets dissect it line by line:
+Thats it! a fully functional C program. It doesnt do much, but it works. First let's dissect it line by line:
 
 ```c
 int main(void) {
@@ -45,7 +45,7 @@ This line tells us that we are about ot define a function called _main_, that it
 
 The only instruction in this function body (between the _{}_) is _return 0;_. This tells us that the main function returns 0, or that when its finished doing what it needs to do, it will leave behind an integer with value 0. All instructions in C end with a _;_. When you are starting out you might have a few problems compiling because you forget to put these in place. but youll learn fast.
 
-When your OS runs this program it will find the main function, do all the instructions inside, then exit saving the return value. in this case its just 0. So lets run this bad boy and see what happens.
+When your OS runs this program it will find the main function, do all the instructions inside, then exit saving the return value. in this case its just 0. So let's run this bad boy and see what happens.
 
 ```
 >gcc minimal.c -o minimal.exe
@@ -60,7 +60,7 @@ This tells our newly installed compiler to compile the C program we wrote and ou
 08/04/2019  14:46            42,669 minimal.exe
 ```
 
-You have created your first c program. So lets run it! In your terminal type minimal.exe to run the program and you should see the following:
+You have created your first c program. So let's run it! In your terminal type minimal.exe to run the program and you should see the following:
 
 ```
 >minimal.exe
@@ -70,7 +70,7 @@ You have created your first c program. So lets run it! In your terminal type min
 
 __Well...__ That was lame. Nothing happened. Or did it? Yes. It did. 
 
-The OS actually ran your program. It found the _main_ function. Went inside and found the one and only instruction: _return 0;_ and thats what it did. But how do we prove it? Well in most operating systems, a process will return an integer and the os will save it in a system variable called errorcode or something of the like. In windows you can read this value:
+The OS actually ran your program. It found the _main_ function. Went inside and found the one and only instruction: _return 0;_ and thats what it did. But how do we prove it? Well in most operating systems, a process will return an integer and the OS will save it in a system variable called errorcode or something of the like. In windows you can read this value:
 
 ```
 >echo %errorlevel%
@@ -82,5 +82,32 @@ The OS actually ran your program. It found the _main_ function. Went inside and 
 In linux you can do:
 
 ```bash
-echo $?
+>echo $?
+0
+
+>
 ```
+
+Wow! your program actually did something. Let's just check to be sure. Edit the original file to return something else, then check what happens...
+
+
+```c
+int main(void) {
+    return 1337;
+}
+```
+
+We have to recompile and run so that we have a new executable program that runs our new code:
+
+```
+>gcc minimal.c -o minimal.exe
+
+>minimal.exe
+
+>echo %errorlevel%
+1337
+
+>
+```
+
+That is super elite bro! I admit, it's not too impressive, however you wrote it and it works. You didnt use fancy tools to _userinterfacify_ everything for you. Feel good about that. Part of learning C programming is understanding at a lower level (than most other languages require) what the computer is actually doing. Hopefully we will nurture that understanding through this series.
