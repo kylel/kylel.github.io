@@ -12,7 +12,11 @@ I am goign to be writing this guide from the perspective of a windows user becau
 Once you have gcc installed and on your path you should be able to open a terminal (command prompt) and run the following:
 
 ```
-C:\c>gcc --version
+>gcc --version
+```
+If installed correctly you should see the following output:
+
+```
 gcc (MinGW.org GCC-8.2.0-3) 8.2.0
 Copyright (C) 2018 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
