@@ -122,4 +122,4 @@ int main(void) {
 }
 ```
 
-Every C program has a main function. It is called _main_ can take arguments (In our case it doesnt. It just takes _void_ which is C for nothing) and it returns an integer to the operating system. You can write what you want this function to do in between the _{}_ and this normally ends with a return staetment. The OS will run your program as a process and save the return value in errorlevel.
+Every C program has a main function. It is called _main_ can take arguments (In our case it doesnt. It just takes _void_ which is C for nothing) and it returns an integer to the operating system. You can write what you want this function to do in between the _{}_ and this normally ends with a return statement. The OS will run your program as a process and save the return value in errorlevel.
