@@ -41,7 +41,7 @@ int main(void) {
 
 The first line is a decalration of the _main_ function. Every C program needs an entry point. A place that the computer can use to start reading instructions and doing work. In C, this is the _main_ function.
 
-This line tells us that we are about ot define a function called _main_, that it will take no arguments _(void)_ and return an integer _int_. The opening curly bracket _{_ tells us that what follows is a list of instructions that this main program will perform. You will see that it is closed on line 3 with _}_. In C, all opening brackets will be closed with closing ones. Makes sense? Right?
+This line tells us that we are about to define a function called _main_, that it will take no arguments _(void)_ and return an integer _int_. The opening curly bracket _{_ tells us that what follows is a list of instructions that this main program will perform. You will see that it is closed on line 3 with _}_. In C, all opening brackets will be closed with closing ones. Makes sense? Right?
 
 The only instruction in this function body (between the _{}_) is _return 0;_. This tells us that the main function returns 0, or that when its finished doing what it needs to do, it will leave behind an integer with value 0. All instructions in C end with a _;_. When you are starting out you might have a few problems compiling because you forget to put these in place. but youll learn fast.
 
