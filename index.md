@@ -25,7 +25,7 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 ## A Minimal C Program
 
-Time to get cracking. Open up your editor of choice, create a file called **minimal.c** and insert the following code:
+Time to get cracking. Open up your editor of choice, create a file called _minimal.c_ and insert the following code:
 
 ```c
 int main(void) {
@@ -33,3 +33,54 @@ int main(void) {
 }
 ```
 
+Thats it! a fully functional C program. It doesnt do much, but it works. First lets dissect it line by line:
+
+```c
+int main(void) {
+```
+
+The first line is a decalration of the _main_ function. Every C program needs an entry point. A place that the computer can use to start reading instructions and doing work. In C, this is the _main_ function.
+
+This line tells us that we are about ot define a function called _main_, that it will take no arguments _(void)_ and return an integer _int_. The opening curly bracket _{_ tells us that what follows is a list of instructions that this main program will perform. You will see that it is closed on line 3 with _}_. In C, all opening brackets will be closed with closing ones. Makes sense? Right?
+
+The only instruction in this function body (between the _{}_) is _return 0;_. This tells us that the main function returns 0, or that when its finished doing what it needs to do, it will leave behind an integer with value 0. All instructions in C end with a _;_. When you are starting out you might have a few problems compiling because you forget to put these in place. but youll learn fast.
+
+When your OS runs this program it will find the main function, do all the instructions inside, then exit saving the return value. in this case its just 0. So lets run this bad boy and see what happens.
+
+```
+>gcc minimal.c -o minimal.exe
+```
+
+This tells our newly installed compiler to compile the C program we wrote and output an executable file called _minimal.exe_. The _-o_ stands for "output file name". If all goes well you should see... Nothing. but if you open the folder you will see a newly created _minimal.exe_ file. Or using the command prompt:
+
+```
+>dir 
+08/04/2019  18:25    <DIR>          ..
+08/04/2019  14:46               192 minimal.c
+08/04/2019  14:46            42,669 minimal.exe
+```
+
+You have created your first c program. So lets run it! In your terminal type minimal.exe to run the program and you should see the following:
+
+```
+>minimal.exe
+
+>
+```
+
+__Well...__ That was lame. Nothing happened. Or did it? Yes. It did. 
+
+The OS actually ran your program. It found the _main_ function. Went inside and found the one and only instruction: _return 0;_ and thats what it did. But how do we prove it? Well in most operating systems, a process will return an integer and the os will save it in a system variable called errorcode or something of the like. In windows you can read this value:
+
+```
+>echo %errorlevel%
+0
+
+>
+```
+
+In linux you can do:
+
+```bash
+echo $?
+```
