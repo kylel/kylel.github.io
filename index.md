@@ -1,2 +1,10 @@
 # Practical Guide to C Programming
 
+This is a guide to get you started with the C programming language. From scratch. There are billions of other guides out there, but I hope that this one provides a sufficiently different approach that may help someone out. 
+
+## First Things First
+
+I am goign to be writing this guide from the perspective of a windows user because I feel that it caters to a wider audience. Its a lot easier to map the instructions to linux than the other way around. To get started you are going to need two things:
+
+1. A compiler. I will be using [GCC](https://gcc.gnu.org/). The windows version can be downloaded [here](http://mingw-w64.org/doku.php/download/win-builds). I have installed mingw-32 but install the 64 bit version if you wish.
+2. A code editor. I suggest [VSCode](https://code.visualstudio.com/)
