@@ -111,3 +111,15 @@ We have to recompile and run so that we have a new executable program that runs 
 ```
 
 That is super elite bro! I admit, it's not too impressive, however you wrote it and it works. You didnt use fancy tools to _userinterfacify_ everything for you. Feel good about that. Part of learning C programming is understanding at a lower level (than most other languages require) what the computer is actually doing. Hopefully we will nurture that understanding through this guide.
+
+### Summary
+
+Now is a good time to summarize:
+
+```c
+int main(void) {
+    return 1337;
+}
+```
+
+Every C program has a main function. It is called _main_ can take arguments (In our case it doesnt. It just takes _void_ which is C for nothing) and it returns an integer to the operating system. You can write what you want this function to do in between the _{}_ and this normally ends with a return staetment. The OS will run your program as a process and save the return value in errorlevel.
