@@ -110,4 +110,4 @@ We have to recompile and run so that we have a new executable program that runs 
 >
 ```
 
-That is super elite bro! I admit, it's not too impressive, however you wrote it and it works. You didnt use fancy tools to _userinterfacify_ everything for you. Feel good about that. Part of learning C programming is understanding at a lower level (than most other languages require) what the computer is actually doing. Hopefully we will nurture that understanding through this series.
+That is super elite bro! I admit, it's not too impressive, however you wrote it and it works. You didnt use fancy tools to _userinterfacify_ everything for you. Feel good about that. Part of learning C programming is understanding at a lower level (than most other languages require) what the computer is actually doing. Hopefully we will nurture that understanding through this guide.
