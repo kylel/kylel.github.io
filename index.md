@@ -2,6 +2,8 @@
 
 This is a guide to get you started with the C programming language. From scratch. There are billions of other guides out there, but I hope that this one provides a sufficiently different approach that may help someone out. 
 
+{:toc}
+
 ## First Things First
 
 I am going to be writing this guide from the perspective of a windows user because I feel that it caters to a wider audience. Its a lot easier to map the instructions to linux than the other way around. To get started you are going to need two things:
