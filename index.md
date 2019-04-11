@@ -190,4 +190,6 @@ Multiline comments start with `/*` and end with `*/`. Anything between these is 
 
 Comments are there to help with code readability. Sometimes coders use them to explain what they are doing. However, don’t rely on them too much. If you write good code, it should be understandable enough (in most cases) without comments!
 
+## Variables
 
+TBD
