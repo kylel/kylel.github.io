@@ -41,17 +41,17 @@ int main(void) {
 
 The first line is a decalration of the `main` function. Every C program needs an entry point. A place that the computer can use to start reading instructions and doing work. In C, this is the `main` function.
 
-This line tells us that we are about to define a function called _main_, that it will take no arguments _(void)_ and return an integer _int_. The opening curly bracket _{_ tells us that what follows is a list of instructions that this main program will perform. You will see that it is closed on line 3 with _}_. In C, all opening brackets will be closed with closing ones. Makes sense? Right?
+This line tells us that we are about to define a function called `main`, that it will take no arguments, `(void)` and return an integer, `int`. The opening curly bracket `{` tells us that what follows is a list of instructions that this main program will perform. You will see that it is closed on line 3 with `}`. In C, all opening brackets will be closed with closing ones. Makes sense? Right?
 
-The only instruction in this function body (between the _{}_) is _return 0;_. This tells us that the main function returns 0, or that when its finished doing what it needs to do, it will leave behind an integer with value 0. All instructions in C end with a _;_. When you are starting out you might have a few problems compiling because you forget to put these in place. but youll learn fast.
+The only instruction in this function body (between the `{}`) is `return 0;`. This tells us that the main function returns 0, or that when it's finished doing what it needs to do, it will leave behind an integer with value 0. All instructions in C end with a semicolon, `;`. When you are starting out you might have a few problems compiling because you forget to put these in place. But you'll learn fast.
 
-When your OS runs this program it will find the main function, do all the instructions inside, then exit saving the return value. in this case its just 0. So let's run this bad boy and see what happens.
+When your OS runs this program it will find the main function, do all the instructions inside, then exit saving the return value. In this case it's just 0. So let's run this bad boy and see what happens.
 
 ```
 >gcc minimal.c -o minimal.exe
 ```
 
-This tells our newly installed compiler to compile the C program we wrote and output an executable file called _minimal.exe_. The _-o_ stands for "output file name". If all goes well you should see... Nothing. but if you open the folder you will see a newly created _minimal.exe_ file. Or using the command prompt:
+This tells our newly installed compiler to compile the C program we wrote and output an executable file called _minimal.exe_. The `-o` stands for "output file name". If all goes well you should see... Nothing. But, if you open the folder you will see a newly created _minimal.exe_ file. Or using the command prompt:
 
 ```
 >dir 
@@ -70,7 +70,7 @@ You have created your first c program. So let's run it! In your terminal type mi
 
 __Well...__ That was lame. Nothing happened. Or did it? Yes. It did. 
 
-The OS actually ran your program. It found the _main_ function. Went inside and found the one and only instruction: _return 0;_ and thats what it did. But how do we prove it? Well in most operating systems, a process will return an integer and the OS will save it in a system variable called errorcode or something of the like. In windows you can read this value:
+The OS actually ran your program. It found the `main` function. Went inside and found the one and only instruction: `return 0;` and thats what it did. But how do we prove it? Well in most operating systems, a process will return an integer and the OS will save it in a system variable called errorcode or something of the like. In windows you can read this value:
 
 ```
 >echo %errorlevel%
@@ -88,7 +88,7 @@ In linux you can do:
 >
 ```
 
-Wow! your program actually did something. Let's just check to be sure. Edit the original file to return something else, then check what happens...
+Wow! your program actually did something. Let's just check to be sure. Edit the original file to return something else, then see what happens...
 
 
 ```c
@@ -122,4 +122,4 @@ int main(void) {
 }
 ```
 
-Every C program has a main function. It is called _main_ can take arguments (In our case it doesnt. It just takes _void_ which is C for nothing) and it returns an integer to the operating system. You can write what you want this function to do in between the _{}_ and this normally ends with a return statement. The OS will run your program as a process and save the return value in errorlevel.
+Every C program has a main function. It is called `main` can take arguments (In our case it doesnt. It just takes `void` which is C for nothing) and it returns an integer to the operating system. You can write what you want this function to do in between the `{}` and this normally ends with a return statement. The OS will run your program as a process and save the return value in errorlevel.
