@@ -207,7 +207,9 @@ let y = 50
 let x = y
 ```
 
-And so on. We can do much the same in C. But, we need to give a bit more information. The compiler needs to know the _type_ of the variable. Because it needs to set aside some memory for it. I digress. 
+And so on. We can do much the same in C. But, we need to give a bit more information. The compiler needs to know the _type_ of the variable. Because it needs to set aside some memory for it. I digress:
+
+![alt-text][memory-high-level]
 
 Your computer has got a lot of RAM. And that’s not just for gaming. A little bit of that 4GB+ that you bought to play CSGO gets allocated to your program when it runs. The compiler needs to tell the computer how much of that block it needs for each variable. Certain types of variables need different sizes and they also interact in different ways. That’s why we need types.
 
@@ -282,3 +284,4 @@ int main(void) {
 
 Mess around with it and see if the program returns what you want. I know that it’s a bit contrived now. I promise its worthwhile understanding these things before we go to the next section concerning `printf()`
 
+[memory-high-level] /memory.png "High Level Memory Setup"
