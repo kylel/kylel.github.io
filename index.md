@@ -1,8 +1,6 @@
 # Practical Guide to C Programming
 
-This is a guide to get you started with the C programming language. From scratch. There are billions of other guides out there, but I hope that this one provides a sufficiently different approach that may help someone out. 
-
-{:toc}
+This is a guide to get you started with the C programming language. From scratch. There are billions of other guides out there, but I hope that this one provides a sufficiently different approach that may help someone out.
 
 ## First Things First
 
