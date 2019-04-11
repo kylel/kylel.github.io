@@ -203,8 +203,8 @@ In C programming that’s essentially what they are. Names of values. Holders of
 ```
 let x = 0
 let x = 10-5
-let x = y
 let y = 50
+let x = y
 ```
 
 And so on. We can do much the same in C. But, we need to give a bit more information. The compiler needs to know the _type_ of the variable. Because it needs to set aside some memory for it. I digress. 
@@ -227,9 +227,11 @@ int main(void) {
 
 So, we made this program a lot more complicated. It’s still pretty simple. Can you see what it does? 
 
-We create a variable called `x` and assign it a value of 1. Then we create a variable called `y` and assign it a value of 2. Both variables are set to type `int`, integer! which means they can be whole numbers, negative or positive.
+We create a variable called `x` and assign it a value of 1. Then we create a variable called `y` and assign it a value of 2. Both variables are set to type `int`, integer! Which means they can be whole numbers, negative or positive.
 
-Next we return `x+y`. There is a lot going on here. The return part you know. Before we used it to return whatever value we wanted... 0, 1, 1337 etc. But, now we are returning an "expression". In C mostly everything is an expression. It’s just some text that when compiled returns a value. `x` on its own will return the value of `x` which is 1. `y` on its own will return 2. `x + y` will return.... __You guessed it__... 3!
+Next we return `x+y`. There is a lot going on here. The return part you know. Before we used it to return whatever value we wanted... 0, 1, 1337 etc. But, now we are returning an "expression". In C mostly everything is an expression. It’s just some text that when compiled returns a value. `x` on its own will return the value of `x` which is 1. `y` on its own will return 2. `x + y` will return.... __You guessed it__... 3! 
+
+The compiler will break that statement up into different parts. First it will take the value of `x` and add it to the value of `y`. Then store it in some place. Then return it as if it was just returning that value. The compiler does all sorts of cool stuff for us!
 
 Let’s run it and see what happens:
 
