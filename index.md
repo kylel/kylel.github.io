@@ -192,4 +192,91 @@ Comments are there to help with code readability. Sometimes coders use them to e
 
 ## Variables
 
-TBD
+If you paid attention in high school, you know about variables. They are basically names (normally just 1 letter) that represent a value. As in:
+
+`let x = 10`
+
+__*OR*__ solve for `x`
+
+In C programming that’s essentially what they are. Names of values. Holders of values would be more specific because in most circumstances you can change them.
+
+```
+let x = 0
+let x = 10-5
+let x = y
+let y = 50
+```
+
+And so on. We can do much the same in C. But, we need to give a bit more information. The compiler needs to know the _type_ of the variable. Because it needs to set aside some memory for it. I digress. 
+
+Your computer has got a lot of RAM. And that’s not just for gaming. A little bit of that 4GB+ that you bought to play CSGO gets allocated to your program when it runs. The compiler needs to tell the computer how much of that block it needs for each variable. Certain types of variables need different sizes and they also interact in different ways. That’s why we need types.
+
+So, `let x = 0` becomes more like `int x = 0;`. Remember that `;`
+
+In this case `int` stands for integer. Your computer knows how to deal with integers well. It can add, subtract, multiply, divide and do all sorts of other things with them. By telling the compiler that `x` is an `int`, you allow the computer to work with it.
+
+Let’s go back to our program and add some variables:
+
+```c
+int main(void) {
+    int x = 1; // declare x to be an integer and assign it a value of 1
+    int y = 2; // declare y to be an integer and assign it a value of 2
+    return x + y; // return the value of x + y
+}
+```
+
+So, we made this program a lot more complicated. It’s still pretty simple. Can you see what it does? 
+
+We create a variable called `x` and assign it a value of 1. Then we create a variable called `y` and assign it a value of 2. Both variables are set to type `int`, integer! which means they can be whole numbers, negative or positive.
+
+Next we return `x+y`. There is a lot going on here. The return part you know. Before we used it to return whatever value we wanted... 0, 1, 1337 etc. But, now we are returning an "expression". In C mostly everything is an expression. It’s just some text that when compiled returns a value. `x` on its own will return the value of `x` which is 1. `y` on its own will return 2. `x + y` will return.... __You guessed it__... 3!
+
+Let’s run it and see what happens:
+
+```
+>gcc minimal.c -o minimal.exe
+
+>minimal.exe
+
+>echo %errorlevel%
+3
+```
+
+Are you all okay with this so far? If not now is the time to go back and make sure you understand how we got here. Because it’s going to get a little more complex going forward!
+
+Play with a few other programs till you get the feel for it:
+
+```c
+int main(void) {
+    int x = 100;
+    int y = 10;
+    return x / y;
+}
+```
+
+```c
+int main(void) {
+    int x = 100;
+    int y = 10;
+    return x * y;
+}
+```
+
+```c
+int main(void) {
+    int x = 100;
+    int y = 10;
+    return x - y;
+}
+```
+
+```c
+int main(void) {
+    int x = 100 / 10 + 1 - 4 * 2;
+    int y = x + 8;
+    return y;
+}
+```
+
+Mess around with it and see if the program returns what you want. I know that it’s a bit contrived now. I promise its worthwhile understanding these things before we go to the next section concerning `printf()`
+
