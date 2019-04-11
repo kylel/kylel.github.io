@@ -4,17 +4,17 @@ This is a guide to get you started with the C programming language. From scratch
 
 ## First Things First
 
-I am going to be writing this guide from the perspective of a windows user because I feel that it caters to a wider audience. Its a lot easier to map the instructions to linux than the other way around. To get started you are going to need two things:
+I am going to be writing this guide from the perspective of a windows user because I feel that it caters to a boader audience. It's also a lot easier to map the instructions to linux than the other way around. To get started you are going to need two things:
 
 1. A compiler. I will be using [GCC](https://gcc.gnu.org/). The windows version can be downloaded [here](http://mingw-w64.org/doku.php/download/win-builds). I have installed mingw-32 but install the 64 bit version if you wish
 2. A code editor. I suggest [VSCode](https://code.visualstudio.com/)
 
-Once you have gcc installed and on your path you should be able to open a terminal (command prompt) and run the following:
+Once you have GCC installed and on your [path](https://stackoverflow.com/questions/9546324/adding-directory-to-path-environment-variable-in-windows) you should be able to open a terminal (command prompt) and run the following:
 
 ```
 >gcc --version
 ```
-If installed correctly you should see the following output:
+If installed correctly you should see the following output or similar:
 
 ```
 gcc (MinGW.org GCC-8.2.0-3) 8.2.0
@@ -39,7 +39,7 @@ Thats it! a fully functional C program. It doesnt do much, but it works. First l
 int main(void) {
 ```
 
-The first line is a decalration of the _main_ function. Every C program needs an entry point. A place that the computer can use to start reading instructions and doing work. In C, this is the _main_ function.
+The first line is a decalration of the `main` function. Every C program needs an entry point. A place that the computer can use to start reading instructions and doing work. In C, this is the `main` function.
 
 This line tells us that we are about to define a function called _main_, that it will take no arguments _(void)_ and return an integer _int_. The opening curly bracket _{_ tells us that what follows is a list of instructions that this main program will perform. You will see that it is closed on line 3 with _}_. In C, all opening brackets will be closed with closing ones. Makes sense? Right?
 
