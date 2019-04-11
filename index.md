@@ -122,4 +122,72 @@ int main(void) {
 }
 ```
 
-Every C program has a main function. It is called `main` can take arguments (In our case it doesnt. It just takes `void` which is C for nothing) and it returns an integer to the operating system. You can write what you want this function to do in between the `{}` and this normally ends with a return statement. The OS will run your program as a process and save the return value in errorlevel.
+Every C program has a main function. It is called `main` can take arguments (In our case it doesnt. It just takes `void` which is C for nothing) and it returns an integer to the operating system. You can write what you want this function to do in between the `{}` and this normally ends with a return statement. The OS will run your program as a process and save the return value in errorlevel. 
+
+### A Note on _Hello World!_
+
+If you have looked at other guides/tutorials/books, you will notice that they all start with the following program:
+
+```c
+#include <stdio.h>
+
+int main (void) {
+    printf("Hello World!");
+    return 0;
+}
+```
+
+I have elected to minimize this as I believe that it tries to introduce to many new concepts at once (preprocessor, functions, strings etc.). But dont worry we'll get there soon!
+
+## Whitespace
+
+[Whitespace](https://en.wikipedia.org/wiki/Whitespace_character) basically refers to the spaces between the words that you write. Different programming languages interpret whitespace in different ways. C doesnt care much about it and thats why things like semicolons `;` and opening and closing brackets `{}` matter so much. It allows the compiler to understand what you are trying to tell it, without needing whitespace. For example we could rewrite our program as follows:
+
+```c
+int main (void) {return 0;}
+```
+
+__OR__
+
+```c
+int 
+main 
+(void) 
+{
+    return 0
+    ;
+}
+```
+
+And the compiler would be cool with it. In fact it would generate exactly the same program in all the above cases. The fact that the compiler doesnt care about whitespace, allows the programmer to determine how best to lay out the code for readability.
+
+## Comments
+
+On to another thing that the compiler ignores, _comments_. 
+
+Have a look at our program with some comments added:
+
+```c
+// This is a single line comment! The comiler ignores everthing after the "//"
+/* This is a multi line comment
+Anything after the "/*" is ignored up until the 
+closing:  
+*/
+
+// Comments can be used to help the programmer
+
+// This is the main function
+int main (void) {
+/* i need to add some code here
+but for now it just returns 0!
+*/
+    return 0;
+}
+```
+
+C has 2 types of comments. Single line comments start with `//`. Everything after these 2 slashes is ignored by the compiler until the end of the line.
+
+Multiline comments start with `/*` and end with `*/`. Anything between these is ignored by the compiler even if it spans multiple lines.
+
+Comments are there to help with code readability. Sometimes coders use them to explain what they are doing. However, dont rely on them too much. If you write good code it should be understandable enough (in most cases) without comments!
+
